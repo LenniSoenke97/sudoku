@@ -1,1 +1,30 @@
 Summarise your findings here (see specification).
+
+'mystery1': is very hard. This can be seen by looking at the amount of
+recursive calls needed to solve the sudoku (see table 1 below). The
+'solve_board' function must be called 558780 times on the board 'mystery1'
+to solve it. This is larger than for any other board. The assumption
+here is that more recursive calls means that the sudoku is more
+difficult to solve.
+
+'mystery2': cannot be solved. You can find this by running the
+'solve_board' function (see sudoku.cpp) and having it return
+false. The initial call of the function returning false means that no
+value could be found for the field A1 that ensures that allows the
+filling in of successive fields without a conflict. 
+
+'mystery3': is hard, but not very hard. This can be seen by looking at
+the amount of recursive calls needed to solve the sudoku (see table 1
+below). The 'solve_board' function must be called 16480 times on the
+board 'mystery1' to solve it. This is definitely lower than the calls
+required to solve 'mystery1' and thus 'mystery3' must be less hard. 
+
+
+Table 1: Recursive Calls Needed per Board (recursive calls was found
+by adjusting solve_board function to accept a "call-by-reference"
+parameter called "iteration_counter")
+easy:2949
+medium:20316
+mystery1: 558780
+mystery2: 16408
+mystery3: 21540
