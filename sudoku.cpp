@@ -162,7 +162,7 @@ bool char_position_to_numerical_position(const char char_position[], int num_pos
     num_position[1] = char_position[1] - 49;
   }
   else {
-    return false
+    return false;
   }
 
   return true;
