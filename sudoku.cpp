@@ -85,7 +85,7 @@ Output: true if the board is complete; false if it is not
 bool is_complete(const char board[ROW_NUMBER][COLUMN_NUMBER]) {
   for(int row=0; row<ROW_NUMBER; row++) {
     for(int col=0; col<COLUMN_NUMBER; col++) {
-      if (board[row][col] == '.')
+      if (!(board[row][col] >= '1' && board[row][col] <= '9'))
 	return false;
     }
   }
